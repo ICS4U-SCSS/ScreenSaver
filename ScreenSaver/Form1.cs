@@ -83,21 +83,6 @@ namespace ScreenSaver
                 }
             }
 
-            //collision between balls
-            for (int i = 0; i < ballXSpeed.Count() - 1; i++)
-            {
-                for (int j = i + 1; j < ballXSpeed.Count(); j++)
-                {
-                    if (ballRec[i].IntersectsWith(ballRec[j]))
-                    {
-                        ballXSpeed[i] *= -1;
-                        ballYSpeed[i] *= -1;
-                        ballXSpeed[j] *= -1;
-                        ballYSpeed[j] *= -1;
-                    }
-                }
-            }
-
             // redraw the screen
             Refresh();
         }
